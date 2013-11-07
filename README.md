@@ -5,11 +5,16 @@ From API Strategy & Practice Conference SF 2013
 This application is a barebones example that demonstrates Fitbit OAuth 1.0a authentication, the Fitbit Subscriptions API, and the Twilio API.
 
 The workflow looks like:
+
 1. A Fitbit user signs into this application.
+
 2. This application subscribes to updates to the user's activity. When the user's Fitbit tracker sync, this application will receive a notification from Fitbit.
+
 3. The user enters their cell phone number into this application.
-3. When the subscription notification from Fitbit is received by this application, this application fetches the user's current step count and daily step goal.
-4. This application then sends a text message to the user's cell phone informing them of how many steps they need to hit their step goal.
+
+4. When the subscription notification from Fitbit is received by this application, this application fetches the user's current step count and daily step goal.
+
+5. This application then sends a text message to the user's cell phone informing them of how many steps they need to hit their step goal.
 
 Fitbit trackers sync every 15–20 minutes when near a Fitbit USB dongle or [supported smart phone](https://www.fitbit.com/devices). Users can also manually request a Fitbit tracker sync.
 
@@ -41,7 +46,7 @@ Fitbit trackers sync every 15–20 minutes when near a Fitbit USB dongle or [sup
 
 3. Update ./config.js with your Fitbit application credentials, Twilio credentials, application hostname, and MongoDB connection information.
 
-3.1 If you are using Modulus to host your application, you will need to create and deploy this application to obtain a hostname.
+If you are using Modulus to host your application, you will need to create and deploy this application to obtain a hostname.
 > modulus project create
 > modulus project deploy
 Remember to enter your hostname into the ./config.js file and redeploy.
