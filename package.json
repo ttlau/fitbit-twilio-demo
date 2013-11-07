@@ -1,7 +1,7 @@
 {
-  "name": "fitbit-example",
-  "mod-project-name": "fitbit-example",
-  "version": "0.0.1",
+  "name": "fitbit-twilio-demo",
+  "mod-project-name": "fitbit-twilio-demo",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "node app.js"

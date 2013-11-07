@@ -33,7 +33,7 @@ function updateUserSteps(encodedId, callback) {
 
 			// Get updated steps from Fitbit API
 			oauth.get(
-				'https://api.fitbit.com/1/user/-/activities/date/' + moment().format('YYYY-MM-DD') + '.json',
+				'https://api.fitbit.com/1/user/-/activities/date/' + moment().utc().add('ms', user.timezoneOffset).format('YYYY-MM-DD') + '.json',
 				user.accessToken,
 				user.accessSecret,
 				function (err, data, res) {
@@ -44,7 +44,7 @@ function updateUserSteps(encodedId, callback) {
 					}
 
 					data = JSON.parse(data);
-					console.log("Fitbit Get Activities", console.log(data));
+					console.log("Fitbit Get Activities", data);
 
 					// Update (and return) the user
 					User.findOneAndUpdate(
