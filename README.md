@@ -42,7 +42,7 @@ Fitbit trackers sync every 15–20 minutes when near a Fitbit USB dongle or [sup
 
 1. git clone this repo
 
-2. cd fitbit-twilio && npm install
+2. cd fitbit-twilio-demo && npm install
 
 3. Update ./config.js with your Fitbit application credentials, Twilio credentials, application hostname, and MongoDB connection information.
 
