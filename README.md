@@ -47,11 +47,14 @@ Fitbit trackers sync every 15–20 minutes when near a Fitbit USB dongle or [sup
 3. Update ./config.js with your Fitbit application credentials, Twilio credentials, application hostname, and MongoDB connection information.
 
 If you are using Modulus to host your application, you will need to create and deploy this application to obtain a hostname.
+
 > modulus project create
+
 > modulus project deploy
+
 Remember to enter your hostname into the ./config.js file and redeploy.
 
-4. Add a subscriber to your Fitbit application settings. Go to https://dev.fitbit.com/apps and click on your app, Edit Application Settings, Add a subscriber. This application expects to receive Fitbit Subscription API notifications at http://{hostname}/notifications , e.g. http://fitbitexample-9501.onmodulus.net/notifications . Format = JSON, Version = 1, Subscriber ID = 1. Click Save.
+4. Add a subscriber to your Fitbit application settings. Go to https://dev.fitbit.com/apps and click on your app, Edit Application Settings, Add a subscriber. This application expects to receive Fitbit Subscription API notifications at http://{hostname}/notifications , e.g. http://fitbitexample-9501.onmodulus.net/notifications . Format = JSON **file**, Version = 1, Subscriber ID = 1. Click Save.
 
 5. Start the app. This happens automatically on Modulus. Otherwise:
 > NODE_ENV=production node app.js
